@@ -1,0 +1,1 @@
+(window.webpackJsonpthedep=window.webpackJsonpthedep||[]).push([[0],{2:function(e,n,t){"use strict";t.r(n);var o=t(1),r=t.n(o);console.log("The print.js module has loaded..."),n.default=function(e){return function(e){if(null==e)throw new TypeError("Cannot destructure undefined")}(e),r.a.createElement("p",null,"You printed something")}}}]);
