@@ -1,8 +1,9 @@
 const path = require('path')
 
 module.exports = {
-  mode: 'production',
+  mode: 'development',
   entry: {
+    index: './src/index.js',
     Print: './src/print.js'
   },
   output: {

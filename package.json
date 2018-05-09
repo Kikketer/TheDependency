@@ -2,7 +2,7 @@
   "name": "the-dep",
   "version": "0.1.0",
   "private": true,
-  "main": "dist/index.bundle.js",
+  "main": "index.js",
   "dependencies": {},
   "scripts": {
     "build": "NODE_ENV=production webpack"
