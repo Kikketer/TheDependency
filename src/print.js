@@ -4,6 +4,7 @@ console.log('The print.js module has loaded...')
 
 // Imagine I'm pretty big with lots of dependencies and such
 export default ({}) => {
+  console.log('Rendering the print library')
   return (
     <p>You printed something</p>
   )
