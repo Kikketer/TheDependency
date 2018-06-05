@@ -5,12 +5,8 @@
   "main": "dist/index.bundle.js",
   "dependencies": {},
   "scripts": {
-    "build": "NODE_ENV=production webpack"
+    "build": "NODE_ENV=development webpack"
   },
-  "files": [
-    "dist/index.bundle.js",
-    "dist/print.bundle.js"
-  ],
   "peerDependencies": {
     "react": "^16.3.2",
     "the-other-dep": "git+https://github.com/Kikketer/TheOtherDependency.git"
