@@ -3,7 +3,7 @@ const path = require('path')
 module.exports = {
   mode: 'production',
   entry: {
-    Print: './src/print.js'
+    index: './src/index.js'
   },
   output: {
     library: 'thedep',
@@ -12,7 +12,7 @@ module.exports = {
     filename: '[name].js',
     path: path.resolve(__dirname)
   },
-  externals: ['react'],
+  externals: ['react', 'the-other-dep'],
   module: {
     rules: [
       {
