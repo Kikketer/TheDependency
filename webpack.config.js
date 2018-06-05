@@ -3,7 +3,8 @@ const path = require('path')
 module.exports = {
   mode: 'development',
   entry: {
-    index: './src/index.js'
+    index: './src/index.js',
+    other: './src/other-component.js'
   },
   output: {
     library: 'thedep',
