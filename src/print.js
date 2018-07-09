@@ -1,4 +1,5 @@
 import React from 'react'
+import { css } from 'emotion'
 // This is a test of a lazy load inside a library
 console.log('The print.js module has loaded...')
 
@@ -6,6 +7,6 @@ console.log('The print.js module has loaded...')
 export default ({}) => {
   console.log('Rendering the print library')
   return (
-    <p>You printed something</p>
+    <p className={css({color: 'purple'})}>You printed something</p>
   )
 }
