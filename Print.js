@@ -141,18 +141,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _emo
 
 /***/ }),
 
-/***/ "./node_modules/emotion/dist/index.esm.js":
-/*!************************************************!*\
-  !*** ./node_modules/emotion/dist/index.esm.js ***!
-  \************************************************/
-/*! exports provided: flush, hydrate, cx, merge, getRegisteredStyles, injectGlobal, keyframes, css, sheet, caches */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function(global) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"flush\", function() { return flush; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"hydrate\", function() { return hydrate; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"cx\", function() { return cx; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"merge\", function() { return merge; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"getRegisteredStyles\", function() { return getRegisteredStyles; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"injectGlobal\", function() { return injectGlobal; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"keyframes\", function() { return keyframes; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"css\", function() { return css; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"sheet\", function() { return sheet; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"caches\", function() { return caches; });\n/* harmony import */ var create_emotion__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! create-emotion */ \"./node_modules/create-emotion/dist/index.esm.js\");\n\n\nvar context = typeof global !== 'undefined' ? global : {};\n\nvar _createEmotion = Object(create_emotion__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(context),\n    flush = _createEmotion.flush,\n    hydrate = _createEmotion.hydrate,\n    cx = _createEmotion.cx,\n    merge = _createEmotion.merge,\n    getRegisteredStyles = _createEmotion.getRegisteredStyles,\n    injectGlobal = _createEmotion.injectGlobal,\n    keyframes = _createEmotion.keyframes,\n    css = _createEmotion.css,\n    sheet = _createEmotion.sheet,\n    caches = _createEmotion.caches;\n\n\n//# sourceMappingURL=index.esm.js.map\n\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../webpack/buildin/global.js */ \"./node_modules/webpack/buildin/global.js\")))\n\n//# sourceURL=webpack://thedep/./node_modules/emotion/dist/index.esm.js?");
-
-/***/ }),
-
 /***/ "./node_modules/stylis-rule-sheet/index.js":
 /*!*************************************************!*\
   !*** ./node_modules/stylis-rule-sheet/index.js ***!
@@ -164,14 +152,27 @@ eval("(function (factory) {\n\t true ? (module['exports'] = factory()) :\n\t\tun
 
 /***/ }),
 
-/***/ "./node_modules/webpack/buildin/global.js":
-/*!***********************************!*\
-  !*** (webpack)/buildin/global.js ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./src/custom-emotion.js":
+/*!*******************************!*\
+  !*** ./src/custom-emotion.js ***!
+  \*******************************/
+/*! exports provided: getEmotional, css, cx, injectGlobal, keyframes */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn this;\n})();\n\ntry {\n\t// This works if eval is allowed (see CSP)\n\tg = g || Function(\"return this\")() || (1, eval)(\"this\");\n} catch (e) {\n\t// This works if the window reference is available\n\tif (typeof window === \"object\") g = window;\n}\n\n// g can still be undefined, but nothing to do about it...\n// We return undefined, instead of nothing here, so it's\n// easier to handle this case. if(!global) { ...}\n\nmodule.exports = g;\n\n\n//# sourceURL=webpack://thedep/(webpack)/buildin/global.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"getEmotional\", function() { return getEmotional; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"css\", function() { return css; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"cx\", function() { return cx; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"injectGlobal\", function() { return injectGlobal; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"keyframes\", function() { return keyframes; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var create_emotion__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! create-emotion */ \"./node_modules/create-emotion/dist/index.esm.js\");\n\n\n\nvar emotion = {};\nvar theDoc = void 0;\nfunction getEmotional(doc) {\n  if (doc) {\n    theDoc = doc;\n  } else if (theDoc) {\n    doc = theDoc;\n  } else {\n    throw Error('Custom Emotions have not been created');\n  }\n  emotion = Object(create_emotion__WEBPACK_IMPORTED_MODULE_1__[\"default\"])({}, { container: doc.getElementsByTagName('head')[0] });\n  return emotion;\n}\n\nvar _emotion = emotion,\n    css = _emotion.css,\n    cx = _emotion.cx,\n    injectGlobal = _emotion.injectGlobal,\n    keyframes = _emotion.keyframes;\n\n\n\n//# sourceURL=webpack://thedep/./src/custom-emotion.js?");
+
+/***/ }),
+
+/***/ "./src/print-dep.js":
+/*!**************************!*\
+  !*** ./src/print-dep.js ***!
+  \**************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _custom_emotion__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./custom-emotion */ \"./src/custom-emotion.js\");\nvar _jsxFileName = '/Users/n0148094/Documents/projects/TheDependency/src/print-dep.js',\n    _this = undefined;\n\n\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\n  // console.log('the CSS: ', getEmotional())\n  var _getEmotional = Object(_custom_emotion__WEBPACK_IMPORTED_MODULE_1__[\"getEmotional\"])(),\n      css = _getEmotional.css;\n\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\n    'p',\n    { className: /*#__PURE__*/ /*#__PURE__*/css({ backgroundColor: 'orange' }), __source: {\n        fileName: _jsxFileName,\n        lineNumber: 7\n      },\n      __self: _this\n    },\n    'Hey there'\n  );\n});\n\n//# sourceURL=webpack://thedep/./src/print-dep.js?");
 
 /***/ }),
 
@@ -183,7 +184,7 @@ eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn th
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var emotion__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! emotion */ \"./node_modules/emotion/dist/index.esm.js\");\nvar _jsxFileName = '/Users/n0148094/Documents/projects/the-dep/src/print.js',\n    _this = undefined;\n\nfunction _objectDestructuringEmpty(obj) { if (obj == null) throw new TypeError(\"Cannot destructure undefined\"); }\n\n\n\n// This is a test of a lazy load inside a library\nconsole.log('The print.js module has loaded...');\n\n// Imagine I'm pretty big with lots of dependencies and such\n/* harmony default export */ __webpack_exports__[\"default\"] = (function (_ref) {\n  _objectDestructuringEmpty(_ref);\n\n  console.log('Rendering the print library');\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\n    'p',\n    { className: /*#__PURE__*/ /*#__PURE__*/Object(emotion__WEBPACK_IMPORTED_MODULE_1__[\"css\"])({ color: 'purple' }), __source: {\n        fileName: _jsxFileName,\n        lineNumber: 10\n      },\n      __self: _this\n    },\n    'You printed something'\n  );\n});\n\n//# sourceURL=webpack://thedep/./src/print.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _custom_emotion__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./custom-emotion */ \"./src/custom-emotion.js\");\n/* harmony import */ var _print_dep__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./print-dep */ \"./src/print-dep.js\");\nvar _jsxFileName = '/Users/n0148094/Documents/projects/TheDependency/src/print.js',\n    _this = undefined;\n\n\n\n\n// import { css } from 'emotion'\n// This is a test of a lazy load inside a library\nconsole.log('The print.js module has loaded...');\n\n// Imagine I'm pretty big with lots of dependencies and such\n/* harmony default export */ __webpack_exports__[\"default\"] = (function (_ref) {\n  var document = _ref.document;\n\n  // This would be handled in the root of the dependency (but that's exactly this)\n  var _getEmotional = Object(_custom_emotion__WEBPACK_IMPORTED_MODULE_1__[\"getEmotional\"])(document),\n      css = _getEmotional.css;\n\n  console.log('Rendering the print library');\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\n    'div',\n    { className: /*#__PURE__*/ /*#__PURE__*/css({ color: 'purple' }), __source: {\n        fileName: _jsxFileName,\n        lineNumber: 15\n      },\n      __self: _this\n    },\n    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_print_dep__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n      __source: {\n        fileName: _jsxFileName,\n        lineNumber: 16\n      },\n      __self: _this\n    }),\n    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\n      'p',\n      {\n        __source: {\n          fileName: _jsxFileName,\n          lineNumber: 17\n        },\n        __self: _this\n      },\n      'You printed something'\n    )\n  );\n});\n\n//# sourceURL=webpack://thedep/./src/print.js?");
 
 /***/ }),
 
